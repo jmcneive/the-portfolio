@@ -1,13 +1,24 @@
+
+// Import Bootstrap CSS
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Import CSSTYLE
 @import "csstyle";
-@import "components/breadcrumb";
 
-body {
-	background: #ffffff;
+// Import Variables
+@import "variables/color";
 
-	h3 {
-		a {
-			color: blue;
-		}
-	}
-}
+// Import Components
+@import "components/button";
+@import "components/type";
+@import "components/animMouse";
+@import "components/animate";
+
+// Import Page Styles
+// @import "pages/home";
+@import "pages/home";
+
+
+
+
+

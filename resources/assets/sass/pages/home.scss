@@ -1,0 +1,181 @@
+
+// Import Components
+// @import "../components/nameGrid";
+@import "../components/animType";
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	padding: 0;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+}
+
+#body {
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	position: relative;
+	background: rgba(30,30,30,1.00);
+	z-index: 999999;
+	margin-bottom: 480px;
+}
+
+header {
+	height: 114px;
+	width: 100%;
+	left: 0;
+	top: 0;
+	position: fixed;
+	z-index: 99999;
+
+	span {
+
+		a {
+			display: block;
+			position: absolute;
+			font-family: "Open Sans";
+			font-size: 15px;
+			top: 40px;
+			left: 49px;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+
+	ul {
+		display: block;
+		position: absolute;
+		font-family: "Open Sans";
+		font-size: 15px;
+		top: 30px;
+		right: 50px;
+		height: 20px;
+
+		li {
+
+			a {
+			}
+		}
+	}
+
+	.navi_fade {
+		display: none;
+	}
+}
+
+.main {
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	position: relative;
+
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+
+	h1 {
+		font-size: 150px;
+	    line-height: 0.93em;
+	    font-family: 'Open Sans';
+	    display: block;
+	    text-align: center;
+	    position: absolute;
+	    width: 80%;
+	    height: 150px;
+	    margin: auto;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    top: 0;
+	    padding: 0;
+	    z-index: 4;
+	    color: #fff;
+	    letter-spacing: -1px;
+	    font-weight: normal;
+	}
+
+	.work_link {
+		position: absolute;
+	    top: 40px;
+	    right: 50px;
+	    font-family: 'Open Sans';
+	    font-size: 15px;
+	    z-index: 999999;
+	    height: 20px;
+	    letter-spacing: 1.2px;
+	    text-align: right;
+	}
+
+	.customer {
+		position: absolute;
+	    bottom: 40px;
+	    left: 50px;
+	    font-family: 'Open Sans';
+	    font-size: 15px;
+	    z-index: 999999;
+	    width: 380px;
+	    height: 20px;
+	    letter-spacing: 1.2px;
+	    text-align: left;
+	    -webkit-animation: fade_left 0.7s ease;
+	    animation: fade_left 0.7s ease;
+	}
+
+	.home_description {
+		display: block;
+		position: absolute;
+		font-family: 'Open Sans';
+		font-size: 15px;
+		bottom: 35px;
+		right: 49px;
+		text-align: right;
+		color: #fff;
+		letter-spacing: 1.2px;
+		z-index: 66666;
+	}
+}
+
+
+// Work Panel
+.teaser-container {
+	padding: 190px 10px 0px 10px;
+    box-sizing: border-box;
+    padding-left: 47px;
+    height: auto;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+
+    .teaser_item {
+    	width: calc(33.33% - 44px);
+    	margin: 0 44px 44px 0;
+    	height: auto;
+    	float: left;
+    	position: relative;
+
+    	img {
+    		max-width: 100%;
+    		width: auto;
+    	}
+    }
+}
+
+@media screen and (max-width: 500px) { 
+	header span.font_color a.font_color {
+		.myName_desktop {
+			display: none;
+		}
+	}
+}
+

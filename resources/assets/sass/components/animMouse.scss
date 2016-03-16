@@ -1,0 +1,38 @@
+.animated-mouse {
+    position: fixed;
+    top: 95%;
+    left: 50.5%;
+    width: 18px;
+    height: 33px;
+    border: 2px solid RGBA(181, 181, 181, 0.5);
+    transform: translate(-50%, -50%);
+    border-radius: 14px;
+
+    &-pointer {
+        position: absolute;
+        width: 4px;
+        height: 6px;
+        border-radius: 100%;
+        background: RGBA(181, 181, 181, 0.5);
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%, 0);
+        animation-name: mousePointer;
+        animation-duration: 3s;
+        animation-iteration-count: 10;
+        animation-direction: normal;
+        animation-timing-function: linear;
+        animation-fill-mode: backwards;
+        animation-delay: .5s;
+    }
+}
+
+@keyframes mousePointer {
+    0%      { opacity: 0; top: 70%; }
+    20%      { opacity: 1; top: 70%; }
+    40%      { opacity: 1; top: 70%; }
+    60%     { opacity: 1; top: 20%; }
+    61%     { opacity: 1; top: 20%; }
+    67%     { opacity: 0; top: 20%; }
+    100%     { opacity: 0; top: 20%; }
+}

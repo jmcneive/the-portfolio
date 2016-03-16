@@ -1,0 +1,20 @@
+@include component(button) {
+	background: #e3e3e3;
+	color: red;
+	padding: 5px;
+	border: 1px solid blue;
+
+	@include option(action) {
+		background: $button;
+		padding: 20px;
+		border-radius: 5px;
+		text-decoration: none;
+
+		&:hover {
+			background: $button-hover;
+			cursor: hand;
+			border: none;
+			color: white;
+		}
+	}
+}

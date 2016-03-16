@@ -1,0 +1,56 @@
+$pathNumber: 16;
+$proportion: (100/sqrt($pathNumber));
+$firstColor: #0057B8;
+$listColors: #F11E4A, #F8A527, #266D7F, #82A, $firstColor;
+$delayCoeff: 0.2s; 
+
+// Nav
+.square {
+  height:22%;
+  width:22%;
+  float:left;
+  background-color:#ffffff;
+}
+
+@for $i from 1 through $pathNumber {
+  .square:nth-child(#{$i}) {
+    animation: pweek $delayCoeff*$pathNumber linear infinite;
+    animation-delay: $i*$delayCoeff;
+  }
+}
+
+.square:nth-child(2) {
+  -webkit-transform: scale(-1,1)
+}
+
+.square:nth-child(3) {
+  -webkit-transform: scale(1,-1)
+}
+
+.P {
+  -webkit-transform: rotate(-45deg);
+  position:fixed;
+  margin-top:0px;
+  margin-left:10px;
+  
+}
+    
+.nav-container {
+  height:60px;
+  width:60px;
+  position: fixed;
+  left: 2%;
+  top: 2%;
+}
+
+
+@keyframes pweek {
+  0% {
+    background-color: $firstColor;
+  }
+  @for $i from 1 through length($listColors) {
+    #{$i*(175/length($listColors))}% {
+      background-color: nth($listColors, $i);
+    }
+  }
+}
